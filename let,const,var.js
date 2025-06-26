@@ -1,0 +1,11 @@
+let accountId = "1234567890";
+const emailId = "s@gmail.com";
+var accountName = "Saloni";
+      console.log("accountId", accountId);
+      console.log(accountId);
+      console.log(emailId);
+accountName = "goyal";
+      console.log(accountName);
+      console.table([accountId, emailId, accountName]);
+let accountPassword;
+       console.log(accountPassword);
