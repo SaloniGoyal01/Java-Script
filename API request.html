@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request & V8 Engine</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'    // // API URL to fetch GitHub user data
+    const xhr = new XMLHttpRequest();                 // Create XMLHttpRequest object
+    xhr.open('GET', requestUrl)                      // Prepare GET request
+    xhr.onreadystatechange = function(){             
+        console.log(xhr.readyState);                 // Logs 0 to 4 during different phases
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)      // Convert JSON text to JavaScript object
+            console.log(typeof data);                       // Should log 'object'
+console.log(data.followers)               // Number of followers
+console.log(data.name)                    // User's name
+console.log(data.location)                // User's location
+console.log(data)
+        }  
+    }
+xhr.send();
+
+
+
+</script>
+
+
+</html>
